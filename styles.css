@@ -1,0 +1,184 @@
+/* Reset semua elemen agar tidak ada margin dan padding bawaan dari browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Menjaga ukuran elemen tetap sesuai dengan width/height */
+}
+
+/* Gaya umum untuk seluruh halaman */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font modern */
+    background-color: #1e293b; /* Warna latar belakang gelap */
+    color: #f1f5f9; /* Warna teks terang */
+    padding: 20px; /* Ruang di sekeliling konten */
+}
+
+/* ------------------------ */
+/* BAGIAN HALAMAN WELCOME */
+/* ------------------------ */
+
+/* Tampilan bagian selamat datang */
+.welcome {
+    text-align: center; /* Teks di tengah */
+    padding: 80px 20px; /* Jarak isi dari tepi */
+    background: #0f172a; /* Warna latar belakang sebagai fallback */
+    
+    /* Gambar latar belakang */
+    background-image: url('https://assets.promediateknologi.id/crop/0x0:819x408/750x500/webp/photo/2023/03/28/kampus-di-tasikmalaya-yang-ada-prodi-informatika-selain-STMIK-Tasikmalaya-4233597400.jpg');
+    background-size: cover; /* Gambar memenuhi seluruh area */
+    background-position: center; /* Gambar di tengah */
+    
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Bayangan luar */
+    margin-bottom: 30px; /* Jarak dengan elemen bawahnya */
+    color: #f1f5f9; /* Warna teks */
+    position: relative; /* Untuk positioning overlay di dalamnya */
+}
+
+/* Overlay gelap di atas gambar agar teks tetap terbaca */
+.welcome::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Menutupi seluruh .welcome */
+    background: rgba(15, 23, 42, 0.8); /* Warna gelap semi transparan */
+    border-radius: 15px; /* Ikuti bentuk kontainer */
+    z-index: 0; /* Di bawah teks */
+}
+
+/* Semua isi .welcome diletakkan di atas overlay */
+.welcome > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Judul utama */
+.welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #38bdf8; /* Warna biru terang */
+    text-shadow: 2px 2px 2px rgba(108, 106, 106, 0.682); /* Efek bayangan dengan blur */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
+    padding: 10px 20px; /* Ruang di dalam */
+    border-radius: 10px; /* Sudut membulat */
+    display: inline-block; /* Supaya menyesuaikan dengan teks*/
+}
+
+/* Subjudul */
+.welcome h2{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Efek bayangan dengan blur */
+    background-color: rgba(51, 181, 236, 0.667); /* Latar belakang hitam transparan */
+    display: inline-block; /* Supaya menyesuaikan dengan  teks */
+
+}
+.welcome h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
+
+}
+
+/* Daftar tidak bernomor */
+.welcome ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Gaya item dalam daftar */
+.welcome li {
+    margin: 5px 0;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* ---------------------- */
+/* BAGIAN TOMBOL UMUM    */
+/* ---------------------- */
+
+/* Gaya tombol standar */
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #2563eb; /* Biru */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer; /* Kursor berubah saat diarahkan */
+    transition: background 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Efek hover saat kursor berada di tombol */
+button:hover {
+    background-color: #021656; /* Biru lebih gelap */
+}
+
+/* ------------------------ */
+/* FORM INPUT & SELECT BOX */
+/* ------------------------ */
+
+/* Kontainer input dan select */
+.container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Tumpuk ke bawah */
+    gap: 10px; /* Jarak antar elemen */
+    display: inline-block; /* Supaya menyesuaikan dengan  teks */
+}
+
+/* Input angka */
+input[type="number"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #94a3b8; /* Warna garis abu muda */
+    font-size: 1rem;
+    width: 200px;
+}
+
+/* Pilihan dropdown */
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #94a3b8;
+    font-size: 1rem;
+    width: 250px;
+    margin-top: 10px;
+}
+
+/* ------------------------ */
+/* BAGIAN TABEL PROSES     */
+/* ------------------------ */
+
+/* Tabel keseluruhan */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Gabung garis */
+    margin-top: 15px;
+}
+
+/* Sel header dan data */
+th, td {
+    border: 1px solid #64748b; /* Warna garis */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Header tabel */
+thead {
+    background-color: #334155; /* Abu gelap */
+    color: #f8fafc; /* Teks terang */
+}
+
+/* Warna baris ganjil dan genap untuk memudahkan pembacaan */
+tbody tr:nth-child(even) {
+    background-color: #1e293b; /* Warna baris genap */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #0f172a; /* Warna baris ganjil */
+}

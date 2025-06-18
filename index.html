@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulasi Penjadwalan Proses</title><!-- Judul yang tampil di tab browser -->
+    <link rel="stylesheet" href="styles.css"><!-- Menghubungkan CSS dari file styles.css -->
+</head>
+<body>
+
+    <!-- Halaman selamat datang -->
+    <div id="welcomeScreen" class="welcome">
+        <h1>SELAMAT DATANG DI PROGRAM KAMI</h1><!-- Judul selamat datang -->
+        <h2>"SIMULASI PENJADWALAN PROSES CPU"</h2><!-- Deskripsi mengenai program -->
+
+        <h3>DOSEN PENGAMPU:</h3><!-- Dosen yang memberikan mata kuliah -->
+        <ul><!-- List dosen pengampu -->
+            <p>PAK ASEP SAEPULLOH ST.,M.Kom</p>
+        </ul>
+
+        <h3>Pembuat Program:</h3><!-- List anggota kelompok -->
+        <ul>
+            <li>11240027 - PAIZ HIDAYATULLOH</li>
+            <li>11240009 - RIFUN ABDURROUF</li>
+        </ul>
+
+        <!-- Tombol untuk melanjutkan ke tampilan program -->
+        <button id="startBtn">Klik disini untuk lanjut ke Program</button>
+    </div>
+
+    <!-- Tampilan program (di sembunyikan dahulu) -->
+    <div id="programScreen" style="display: none">
+        <h1>Simulasi Penjadwalan Proses CPU</h1><!-- Judul tampilan -->
+
+        <!-- Container untuk input proses -->
+        <div class="container">
+            <label for="numberProcess">Jumlah yang akan di proses</label><!-- Label untuk input -->
+            <input id="numberProcess" type="number" min="1" max="100"><!-- Input number proses -->
+            <button id="generateTable">Buat Tabel Input</button><!-- Tombol untuk generate table -->
+        </div>
+
+        <h2>Daftar Proses</h2><!-- Judul daftar proses -->
+
+        <!-- Tabel daftar proses yang akan diberi data oleh javascript -->
+        <table id="processTable">
+            <thead>
+                <tr>
+                    <th>Proses</th><!-- Kolom proses -->
+                    <th>Waktu Datang</th><!-- Kolom waktu datang -->
+                    <th>CPU Time</th><!-- Kolom CPU Time (burst) -->
+                </tr>
+            </thead>
+            <tbody><!-- Konten proses akan dimasukkan secara dinamis --></tbody>
+        </table>
+
+        <h2>Pilih Metode Penjadwalan</h2><!-- Judul pilihan metode -->
+
+        <!-- Pilihan algorithm penjadwalan -->
+        <select id="schedules">
+            <option value="">--Silakan Pilih--</option><!-- Opsi standar -->
+            <option value="FIFO">FIFO</option><!-- First In First Out -->
+            <option value="SJF">SJF</option><!-- Shortest Job First -->
+            <option value="Round Robin">Round Robin</option><!-- Round Robin -->
+            <option value="SRTF">SRTF</option><!-- Shortest Remaining Time First -->
+        </select>
+
+        <button id="calculateSchedule">Jalankan Jadwal</button><!-- Tombol untuk menjalankan perhitungan jadwal -->
+
+        <h2>Hasil Jadwal</h2><!-- Judul hasil jadwal -->
+        <!-- Tabel hasil perhitungan jadwal -->
+        <table id="scheduleTable">
+            <thead>
+                
+                <tr>
+                    <th>Proses</th><!-- Nama proses -->
+                    <th>Masuk</th><!-- Waktu proses mulai -->
+                    <th>CPU Time</th><!-- Lama proses (burst) -->
+                    <th>Selesai</th><!-- Waktu proses selesai -->
+                    <th>Turnaround</th><!-- Turnaround Time -->
+                    <th>Tunggu</th><!-- Waiting Time -->
+                </tr>
+            </thead>
+            <tbody><!-- Konten hasil jadwal akan diberi oleh javascript --></tbody>
+        </table>
+
+    </div>
+
+<script src="script.js"><!-- File javascript yang diberi nama script.js --></script>
+
+</body>
+</html>
