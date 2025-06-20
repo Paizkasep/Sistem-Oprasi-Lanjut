@@ -182,3 +182,16 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: #0f172a; /* Warna baris ganjil */
 }
+
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+    display: block;
+  }
+
+  button {
+    width: 100%;
+  }
+}
