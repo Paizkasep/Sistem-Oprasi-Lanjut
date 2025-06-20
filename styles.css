@@ -65,13 +65,13 @@ body {
 
 /* Subjudul */
 .welcome h2{
+    font-size: 2.0rem;
+    color: #f2ff01; /* Warna teks */
     margin-top: 10px;
     margin-bottom: 5px;
     padding: 8px 15px;
     border-radius: 8px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Efek bayangan dengan blur */
-    background-color: rgba(51, 181, 236, 0.667); /* Latar belakang hitam transparan */
-    display: inline-block; /* Supaya menyesuaikan dengan  teks */
+    text-shadow: 1px 1px 1px rgb(255, 255, 255); /* Efek bayangan dengan blur */
 
 }
 .welcome h3 {
